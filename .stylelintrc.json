@@ -1,0 +1,23 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "font-family-name-quotes": null,
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["layer"]
+      }
+    ],
+    "selector-class-pattern": null
+  },
+  "overrides": [
+    {
+      "customSyntax": "postcss-scss",
+      "files": ["**/*.scss"]
+    }
+  ]
+}
