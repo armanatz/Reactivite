@@ -21,7 +21,23 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'import/prefer-default-export': 'warn',
+    'react/display-name': 0,
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: ['function-declaration', 'arrow-function'],
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'react/jsx-props-no-spreading': 0,
     'react/react-in-jsx-scope': 0,
+    'react/require-default-props': [
+      'error',
+      {
+        functions: 'defaultArguments',
+      },
+    ],
     'react-hooks/exhaustive-deps': 'warn',
   },
 };
